@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: #eee;
+  font-family: 'Manrope';
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+.contenido {
+  margin: 2vw 5vw;
+}
+
+/*SECTOR HEADER*/
+
+header {
+  max-width: 1440px;
+  padding: 10px 25px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  top: 0;
+  position: sticky;
+  background-color: #eee;
+  /*border-bottom: 3px solid #b8b8b8;*/
+  box-shadow: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
+}
+
+.nav-logo img{
+  height: 50px;
+}
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-bar a{
+  font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+  color: #131313;
+  border-radius: 24px;
+  transition-property: background-color, color;
+  transition-duration: 0.8s;
+}
+.nav-bar a:hover {
+  background-color: #e7700d; /*#e47d1d;*/
+  color: #eeef;
+}
+
+/*SECCION PRINCIPAL*/
+
+.content-box-1, .content-box-2, .content-box-3, .content-box-4, .content-box-5{
+  overflow-wrap: break-word; 
+  word-wrap: break-word;
+  overflow: hidden;         
+  box-sizing: border-box;
+  margin: 50px 0;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #c5c1ba;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.content-box-1 img{
+  width: 100%;
+  margin: auto;
+}
+
+.sucursal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  h3{
+  text-transform: uppercase;
+  }
+}
+
+.paragraph{
+  font-size: 1em;
+}
+
+section > p, .seccion-titulo{ 
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: justify;
+  color: #131313;
+}
+
+.seccion-titulo{
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.paymet-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.logo-paymet {
+  img{
+  width: 200px;
+  height: 80px;
+  }
+}
+
+/*SECTOR FOOTER*/
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 50px;
+  background-color: #0b0b0c;
+  color: #c5c1ba;
+}
+
+.footer-title{
+  h3{
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 20px 100px 0 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content:center; 
+  }
+}
+
+.footer-container{
+  display: flex;
+  flex-direction:row;
+  justify-content:center; 
+}
+
+.footer__link{
+  margin: 10px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #c5c1ba;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+.footer__icon {
+  width: 30px;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.footer__link:hover, .footer__item img:hover{
+  opacity: 0.3;
+  transform: scale(1.2);
+}
+
+.copyright{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.copyright {
+  span{
+  font-size: 0.9rem;
+  color: #666;
+  }
+  img{
+  margin: 10px;
+  }
+}
