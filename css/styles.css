@@ -50,11 +50,10 @@ header {
 .nav-bar a{
   font-family: 'Poppins', sans-serif, Helvetica;
   font-weight: 500;
-  padding: 10px;
+  padding: 0.5rem;
   text-decoration: none;
   text-wrap: nowrap;
-  color: #131313;
-  border-radius: 24px;
+  color: #1f1f1f;
   transition-property: background-color, color;
   transition-duration: 0.5s;
 }
@@ -62,6 +61,7 @@ header {
 .nav-bar a:hover {
   background-color: none;
   color: #e7700d; /*#e47d1d;*/
+  border-bottom: 3px solid #e7700d;
 }
 
 section{
@@ -70,25 +70,14 @@ section{
 
 /*SECCION PRINCIPAL*/
 
-.content-box-2, .content-box-3, .content-box-4, .content-box-5{
-  overflow-wrap: break-word; 
-  word-wrap: break-word;        
-  box-sizing: border-box;
-  margin: 0;
-  padding: 20px;
-  border-radius: 1rem;
-  background-color: #EFEFEF;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
 .seccion-titulo{ 
   font-family: 'Poppins', sans-serif, Helvetica;
   font-size: 1.1rem;
   line-height: 1.6;
   font-weight: 600;
-  padding: 1rem 0;
+  margin: 1rem 0;
   text-align: left;
-  color: #131313;
+  color: #161616;
 }
 
 .slider {
@@ -155,6 +144,14 @@ section{
 .aboutus .content-box-2{
   display: flex;
   flex-direction: row;
+  overflow-wrap: break-word; 
+  word-wrap: break-word;        
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  background-color: #EFEFEF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   img{
     width: 30%;
     height: auto;
@@ -165,7 +162,7 @@ section{
 .aboutus .content-box-2 .paragraph p{
   font-family: 'Roboto', sans-serif, Helvetica;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 2rem;
   text-align: left;
   margin: 0 0 1em 1em;
@@ -180,7 +177,11 @@ section{
 .content-box-3{
   overflow: hidden;
   position: relative;
-  white-space: nowrap;
+  margin: 0;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  background-color: #EFEFEF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .logo-slide{
@@ -205,7 +206,7 @@ section{
   }
 }
 
-.medios-pago .content-box-5{
+.medios-pago .content-box-4{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20rem;
@@ -213,25 +214,15 @@ section{
   background-size:cover;
   background-position: center;
   padding: 2rem 3rem;
+  margin: 0;
   height: 25em;
   max-height: auto;
+  border-radius: 1rem;
+  background-color: #EFEFEF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.pay-column-2{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-self: flex-end;
-}
-
-.medios-pago .content-box-5 .logo-paymet {
-  img{
-  object-fit: contain;
-  width: 70%;
-  }
-}
-
-.medios-pago .content-box-5{
+.medios-pago .content-box-4{
   h3{
     font-family: 'Poppins', sans-serif, Helvetica;
     font-size: 2.5rem;
@@ -242,7 +233,7 @@ section{
   }
 }
 
-.medios-pago .content-box-5{
+.medios-pago .content-box-4{
   h4{
   font-family: 'Roboto', sans-serif, Helvetica;
   font-size: 2rem;
@@ -252,27 +243,59 @@ section{
   }
 }
 
-.medios-pago .content-box-5{
+.pay-column-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-self: flex-end;
+  gap: 1rem;
+}
+
+.medios-pago .content-box-4 .pay-column-2 .logo-paymet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+  width: 40%;
+  margin-bottom: 0.5rem;
+  }
+}
+
+.medios-pago .content-box-4{
   h5{
   font-family: 'Poppins', sans-serif, Helvetica;
   font-size: 1rem;
   font-weight: 700;
   line-height: 2rem;
-  text-align: left;
+  text-align: center;
   color: #eaeaea;
   }
 }
 
-.sucursales .content-box-4{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border: 2px solid #161616;
+.sucursales{
+  margin-left: -5vw; 
+  margin-right: -5vw;
+  width: calc(100% + 10vw);
+  background-color: #e4e4e4;
 }
 
-.sucursales .content-box-4 .sucursal{
+.sucursales .seccion-titulo, h2{
+  margin-left: 5vw;
+  font-size: 2rem;
+  text-align: center;
+  color: #1f1f1f;
+}
+
+.sucursales .content-box-5{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 2rem 3rem;
+}
+
+.sucursales .content-box-5 .sucursal{
   display: grid;
   grid-template-columns: 1fr 2fr;
-  border: 2px solid #8d8d8d;
+  border: 2px solid #c3c3c3;
   border-radius: 10px;
   padding: 1.5em 0;
   margin: 20px;
@@ -281,23 +304,23 @@ section{
   font-family: 'Poppins', sans-serif, Helvetica;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  color: #1f1f1f;
+  color: #303030;
   }
   p{
     font-family: 'Roboto', sans-serif, Helvetica;
-    color: #2d2d2d;
+    color: #1f1f1f;
   }
 }
 
-.sucursales .content-box-4 .sucursal .sucursal-ico{
+.sucursales .content-box-5 .sucursal .sucursal-ico{
    text-align: center;
 }
 
-.sucursales .content-box-4 .sucursal .sucursal-ico img{
+.sucursales .content-box-5 .sucursal .sucursal-ico img{
   width: 35%;
 }
 
-.sucursales .content-box-4 .sucursal .sucursal-text{
+.sucursales .content-box-5 .sucursal .sucursal-text{
   margin: 0;
 }
 
@@ -305,7 +328,7 @@ section{
 
 footer {
   width: 100%;
-  padding: 50px;
+  padding: 5rem;
   background-color: #121212;
   color: #c5c1ba;
 }
@@ -313,7 +336,7 @@ footer {
 .footer-title{
   h3{
   font-family: 'Roboto', sans-serif, Helvetica;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 30px;
