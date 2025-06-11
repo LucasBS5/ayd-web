@@ -398,29 +398,28 @@ footer {
 /*DISEÑO RESPONSIVE CON MEDIAQUERIES*/
 
 @media (max-width: 600px){
-  header{
-  width: 100%;
-  padding: 1rem 5vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  top: 0;
-  position: sticky;
-  background-color: #eee;
-  /*border-bottom: 3px solid #b8b8b8;*/
-  box-shadow: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
-  }
+
+section{
+  padding: 1rem 0;
+}
+
+.contenido {
+  margin: 2rem 5vw;
+}
+
+header{
+  padding: 1rem 5vw 0.5rem 5vw;
+}
 
 .nav-logo{
   img{
-  width: 100%;
+  width: 35%;
   }
 } 
 
 .nav-bar{
   display: none;
-  }
+}
 
 .nav-bar a{
   /*font-weight: 600;
@@ -432,10 +431,122 @@ footer {
   transition-duration: 0.8s;*/
   display: none;
   }
+
 .nav-bar a:hover {
-  background-color: #e7700d; /*#e47d1d;*/
-  color: #eeef;
+  display: none;
+}
+
+.next, .prev{
+  cursor: none;
+  font-size: 0.8rem;
+}
+
+.aboutus .content-box-2{
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  img{
+    width: 100%;
+    margin: 1rem 0 1.5rem 0;
   }
+}
+
+.aboutus .content-box-2 .paragraph p{
+  font-weight: 600;
+}
+
+.content-box-3{
+  padding: 1rem 1rem;
+}
+
+.logo-slide img{ 
+  width: 12%;
+}
+
+.medios-pago .content-box-4{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 1rem 1rem;
+  margin: 0;
+  height: 15em;
+}
+
+.medios-pago .content-box-4{
+  h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 2rem;
+    margin: 0.8rem 0;
+  }
+}
+
+.medios-pago .content-box-4{
+  h4{
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  }
+}
+
+.pay-column-2{
+  gap: 1rem;
+}
+
+.medios-pago .content-box-4 .pay-column-2 .logo-paymet {
+  img{
+  width: 40%;
+  margin-bottom: 0.3rem;
+  }
+}
+
+.medios-pago .content-box-4{
+  h5{
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1rem;
+  }
+}
+
+.sucursales{
+  padding: 2rem 0 2rem 0;
+}
+
+.sucursales .seccion-titulo, h2{
+  font-size: 1.4rem;
+  margin-left: 0;
+}
+
+.sucursales .content-box-5{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.sucursales .content-box-5 .sucursal{
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  h3{
+  font-size: 1rem;
+  text-align: left;
+  }
+  p{
+    line-height: 1.6;
+  }
+}
+
+.sucursales .content-box-5 .sucursal .sucursal-ico{
+   display: none;
+}
+
+.sucursales .content-box-5 .sucursal .sucursal-ico img{
+  display: none;
+}
 
   footer {
   padding: 1.5rem;
@@ -444,12 +555,10 @@ footer {
 .footer-title{
   h3{
   font-size: 1.3rem;
-  text-transform: uppercase;
   padding: 0;
   margin: 1rem 0;
   display: flex;
-  flex-direction: row;
-  justify-content:flex-start; 
+  flex-direction: column;
   }
 }
 
@@ -460,19 +569,12 @@ footer {
 }
 
 .footer__link{
-  margin: 10px 0 10px 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
   font-size: 1rem;
-  text-decoration: none;
-  color: #c5c1ba;
 }
 
 .footer__icon {
-  width: 30px;
-  margin: 10px 10px 10px 0;
-  transition: 0.5s;
+  width: 8%;
+  margin-left: 0;
 }
 
 .footer__link:hover, .footer__item img:hover{
@@ -480,7 +582,7 @@ footer {
 }
 
 .copyright{
-  margin-top: 10px;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
