@@ -148,13 +148,14 @@ section{
   word-wrap: break-word;        
   box-sizing: border-box;
   margin: 0;
-  padding: 2rem 3rem;
+  padding: 2rem;
   border-radius: 1rem;
   background-color: #EFEFEF;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   img{
     width: 30%;
     height: auto;
+    opacity: 0.9;
     border-radius: 1em;
   }
 }
