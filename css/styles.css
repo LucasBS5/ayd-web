@@ -114,6 +114,7 @@ section{
   padding: 1rem;
   color: #eaeaea;
   background-color: #161616;
+  opacity: 0.6;
   font-weight: bold;
   font-size: 2rem;
   transition: 0.6s ease;
@@ -163,7 +164,7 @@ section{
 .aboutus .content-box-2 .paragraph p{
   font-family: 'Roboto', sans-serif, Helvetica;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 2rem;
   text-align: left;
   margin: 0 0 1em 1em;
@@ -357,12 +358,17 @@ footer {
   padding-right: 20px;
   display: flex;
   align-items: center;
-  font-family: 'Roboto', sans-serif, Helvetica;
-  font-size: 0.8rem;
   text-decoration: none;
   color: #c5c1ba;
   transition-property: opacity;
   transition-duration: 0.5s;
+}
+
+.footer__link h6{
+  font-family: 'Roboto', sans-serif, Helvetica;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-left: 1rem;
 }
 
 .footer__icon {
@@ -401,7 +407,8 @@ footer {
 @media (max-width: 600px){
 
 section{
-  padding: 1rem 0;
+  padding: 0;
+  margin: 5rem 0;
 }
 
 .contenido {
@@ -418,20 +425,9 @@ header{
   }
 } 
 
-.nav-bar{
+.nav-bar .nav__item{
   display: none;
 }
-
-.nav-bar a{
-  /*font-weight: 600;
-  padding: 10px;
-  text-decoration: none;
-  color: #131313;
-  border-radius: 24px;
-  transition-property: background-color, color;
-  transition-duration: 0.8s;*/
-  display: none;
-  }
 
 .nav-bar a:hover {
   display: none;
@@ -442,18 +438,45 @@ header{
   font-size: 0.8rem;
 }
 
+.imagen-aboutus-desktop{
+  display: none;
+}
+
+.aboutus{
+  margin-left: -5vw;
+  margin-right: -5vw;
+  width: calc(100% + 10vw);
+}
+
+.aboutus h2{
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  margin-left: 5vw;
+  padding: 0;
+}
+
 .aboutus .content-box-2{
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 0 5vw 5vw 5vw;
+  border-radius: 0;
   img{
     width: 100%;
-    margin: 1rem 0 1.5rem 0;
+    border-radius: 1rem;
+    margin: 1rem 0;
   }
 }
 
 .aboutus .content-box-2 .paragraph p{
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.marcas h2{
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  padding: 0;
 }
 
 .content-box-3{
@@ -471,6 +494,12 @@ header{
   padding: 1rem 1rem;
   margin: 0;
   height: 15em;
+}
+
+.medios-pago h2{
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  padding: 0;
 }
 
 .medios-pago .content-box-4{
@@ -509,47 +538,52 @@ header{
   }
 }
 
-.sucursales{
-  padding: 2rem 0 2rem 0;
-}
-
 .sucursales .seccion-titulo, h2{
-  font-size: 1.4rem;
-  margin-left: 0;
+  margin: 0;
+  padding: 1.5rem 1rem 1rem 1rem;
+  font-size: 1.7rem;
 }
 
 .sucursales .content-box-5{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
 }
 
 .sucursales .content-box-5 .sucursal{
   display: grid;
-  grid-template-columns: 1fr;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  h3{
-  font-size: 1rem;
+  grid-template-columns: 1fr 2fr;
+  border: 2px solid #c3c3c3;
+  border-radius: 10px;
+  padding: 1.5em 0;
+  margin: 20px;
   text-align: left;
+  h3{
+  font-family: 'Poppins', sans-serif, Helvetica;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #303030;
   }
   p{
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif, Helvetica;
+    color: #1f1f1f;
   }
 }
 
 .sucursales .content-box-5 .sucursal .sucursal-ico{
-   display: none;
+   text-align: center;
 }
 
 .sucursales .content-box-5 .sucursal .sucursal-ico img{
-  display: none;
+  width: 35%;
 }
 
-  footer {
+.sucursales .content-box-5 .sucursal .sucursal-text{
+  margin: 0;
+}
+
+footer {
   padding: 1.5rem;
 }
 
@@ -560,25 +594,29 @@ header{
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
+  text-align: center;
   }
 }
 
 .footer-container{
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
   justify-content:center; 
 }
 
+.footer__link-mobile svg{
+  margin: 1.5rem 1.5rem;
+}
+
 .footer__link{
-  font-size: 1rem;
+  display: none;
 }
 
-.footer__icon {
-  width: 8%;
-  margin-left: 0;
+.footer__link svg{
+  display: none;
 }
 
-.footer__link:hover, .footer__item img:hover{
+.footer__link:hover, .footer__item svg:hover{
   display: none;
 }
 
@@ -599,5 +637,25 @@ header{
   img{
   margin: 10px;
   }
+  }
+}
+
+
+@media (min-width: 650px){
+
+.nav-bar .menu{
+  display: none;
+}
+
+.imagen-aboutus-mobile{
+  display: none;
+}
+
+.content-box-5-mobile{
+  display: none;
+}
+
+.footer__link-mobile{
+  display: none;
   }
 }
