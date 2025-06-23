@@ -470,7 +470,7 @@ header{
 .aboutus .content-box-2 .paragraph p{
   font-size: 1.2rem;
   font-weight: 400;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .marcas h2{
@@ -584,12 +584,13 @@ header{
 }
 
 footer {
-  padding: 1.5rem;
+  padding: 3rem;
 }
 
 .footer-title{
   h3{
   font-size: 1.3rem;
+  font-weight: 600;
   padding: 0;
   margin: 1rem 0;
   display: flex;
