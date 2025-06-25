@@ -142,40 +142,6 @@ section{
   to {opacity: 1}
 }
 
-.aboutus .content-box-2{
-  display: flex;
-  flex-direction: row;
-  overflow-wrap: break-word; 
-  word-wrap: break-word;        
-  box-sizing: border-box;
-  margin: 0;
-  padding: 2rem;
-  border-radius: 1rem;
-  background-color: #EFEFEF;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  img{
-    width: 30%;
-    height: auto;
-    opacity: 0.9;
-    border-radius: 1em;
-  }
-}
-
-.aboutus .content-box-2 .paragraph p{
-  font-family: 'Roboto', sans-serif, Helvetica;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 2rem;
-  text-align: left;
-  margin: 0 0 1em 1em;
-  color: #1f1f1f;
-  span{
-    color: #e7700d;
-    font-weight: 600;
-    cursor: pointer;
-  }
-}
-
 .content-box-3{
   overflow: hidden;
   position: relative;
@@ -241,6 +207,7 @@ section{
   font-size: 2rem;
   font-weight: 600;
   line-height: 3rem;
+  margin-top: 3rem;
   color: #eaeaea;
   }
 }
@@ -412,16 +379,16 @@ section{
 }
 
 .contenido {
-  margin: 2rem 5vw;
+  margin: 2rem 7vw;
 }
 
 header{
-  padding: 1rem 5vw 0.5rem 5vw;
+  padding: 1rem 7vw 0.5rem 7vw;
 }
 
 .nav-logo{
   img{
-  width: 35%;
+  width: 40%;
   }
 } 
 
@@ -443,35 +410,82 @@ header{
 }
 
 .aboutus{
-  margin-left: -5vw;
-  margin-right: -5vw;
-  width: calc(100% + 10vw);
+  margin-left: -7vw;
+  margin-right: -7vw;
+  width: calc(100% + 14vw);
 }
 
 .aboutus h2{
   font-size: 1.3rem;
   margin-bottom: 1.2rem;
-  margin-left: 5vw;
+  margin-left: 7vw;
   padding: 0;
 }
 
 .aboutus .content-box-2{
   display: flex;
   flex-direction: column;
-  padding: 0 5vw 5vw 5vw;
+  padding: 0 7vw 7vw 7vw;
   border-radius: 0;
-  img{
-    width: 100%;
-    border-radius: 1rem;
-    margin: 1rem 0;
-  }
+}
+
+.aboutus .content-box-2 img{
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0;
+}
+
+.contenido-oculto {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.btn-toggle {
+  background: none;
+  border: none;
+  color: #e7700d;
+  font-family: 'Roboto';
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+  align-self: flex-start;
+  padding: 0;
+}
+
+.btn-toggle:hover {
+  text-decoration: underline;
 }
 
 .aboutus .content-box-2 .paragraph p{
+  font-family: 'Roboto', sans-serif, Helvetica;
   font-size: 1.2rem;
   font-weight: 400;
-  margin: 2rem 0;
+  margin: 1rem 0;
+  line-height: 2;
+  text-align: left;
+  color: #1f1f1f;
+  span{
+    color: #202020;
+    font-weight: 800;
+    cursor: pointer;
+  }
 }
+
+.aboutus .content-box-2 .contenido-oculto p{
+  font-family: 'Roboto', sans-serif, Helvetica;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 2;
+  text-align: left;
+  color: #1f1f1f;
+  span{
+    color: #202020;
+    font-weight: 800;
+    cursor: pointer;
+  }
+}
+  
 
 .marcas h2{
   font-size: 1.3rem;
@@ -491,7 +505,7 @@ header{
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
-  padding: 1rem 1rem;
+  padding: 1rem;
   margin: 0;
   height: 15em;
 }
@@ -531,6 +545,7 @@ header{
 }
 
 .medios-pago .content-box-4{
+  padding: 1rem;
   h5{
   font-size: 0.8rem;
   font-weight: 700;
@@ -548,7 +563,7 @@ header{
   display: grid;
   grid-template-columns: 1fr;
   margin: 0;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 }
 
 .sucursales .content-box-5 .sucursal{
@@ -557,7 +572,7 @@ header{
   border: 2px solid #c3c3c3;
   border-radius: 10px;
   padding: 1.5em 0;
-  margin: 20px;
+  margin: 1rem 0;
   text-align: left;
   h3{
   font-family: 'Poppins', sans-serif, Helvetica;
@@ -567,6 +582,7 @@ header{
   }
   p{
     font-family: 'Roboto', sans-serif, Helvetica;
+    font-size: 1.2rem;
     color: #1f1f1f;
   }
 }
@@ -649,6 +665,62 @@ footer {
 }
 
 .imagen-aboutus-mobile{
+  display: none;
+}
+
+.aboutus .content-box-2{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow-wrap: break-word; 
+  word-wrap: break-word;        
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #EFEFEF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.aboutus .content-box-2 img{
+  width: 30%;
+  height: auto;
+  opacity: 0.9;
+  border-radius: 1em;
+}
+
+.aboutus .content-box-2 .contenido-oculto p{
+  display: block;
+  font-family: 'Roboto', sans-serif, Helvetica;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: left;
+  margin: 0 0 1em 2em;
+  color: #1f1f1f;
+  span{
+    color: #202020;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.aboutus .content-box-2 .paragraph p{
+  font-family: 'Roboto', sans-serif, Helvetica;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: left;
+  margin: 0 0 1em 2em;
+  color: #1f1f1f;
+  span{
+    color: #202020;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.btn-toggle {
   display: none;
 }
 
