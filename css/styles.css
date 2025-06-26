@@ -653,7 +653,7 @@ footer {
   }
 }
 
-
+/*---------- DESKTOP ----------*/
 @media (min-width: 650px){
 
 #menu{
@@ -731,6 +731,7 @@ footer {
   font-weight: 400;
   line-height: 2rem;
   text-align: left;
+  margin: 0 0 1em 2em;
   color: #1f1f1f;
   span{
     color: #272727;
