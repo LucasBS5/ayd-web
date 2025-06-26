@@ -40,30 +40,6 @@ header {
   width: 20%;
 }
 
-.nav-bar{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-bar a{
-  font-family: 'Poppins', sans-serif, Helvetica;
-  font-weight: 500;
-  padding: 0.5rem;
-  text-decoration: none;
-  text-wrap: nowrap;
-  color: #1f1f1f;
-  transition-property: background-color, color;
-  transition-duration: 0.5s;
-}
-
-.nav-bar a:hover {
-  background-color: none;
-  color: #e7700d; /*#e47d1d;*/
-  border-bottom: 3px solid #e7700d;
-}
-
 section{
   padding: 3rem 0;
 }
@@ -307,6 +283,7 @@ footer {
   font-family: 'Roboto', sans-serif, Helvetica;
   font-size: 1.3rem;
   font-weight: 900;
+  color: #7a7a7a;
   text-transform: uppercase;
   margin-bottom: 30px;
   display: flex;
@@ -369,7 +346,7 @@ footer {
   }
 }
 
-/*DISEÑO RESPONSIVE CON MEDIAQUERIES*/
+/*----------RESPONSIVE CON MEDIAQUERIES----------*/
 
 @media (max-width: 600px){
 
@@ -384,20 +361,38 @@ section{
 
 header{
   padding: 1rem 7vw 0.5rem 7vw;
-}
-
-.nav-logo{
-  img{
-  width: 40%;
-  }
+  position: relative;
+  z-index: 10;
 } 
 
-.nav-bar .nav__item{
-  display: none;
+.nav-logo img{
+  width: 40%;
 }
 
-.nav-bar a:hover {
+.nav-bar{
   display: none;
+  position: absolute;
+}
+
+.nav-bar.active {
+  display: flex;
+  flex-direction: column;
+  background-color: #EFEFEF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+  padding: auto;
+  top: 100%;
+  right: 0;
+  z-index: 20;
+}
+
+.nav-bar a{
+  font-family: 'Poppins', sans-serif, Helvetica;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  text-align: left;
+  text-decoration: none;
+  color: #1f1f1f;
 }
 
 .next, .prev{
@@ -431,6 +426,7 @@ header{
 
 .aboutus .content-box-2 img{
   width: 100%;
+  height: 30vh;
   border-radius: 1rem;
   margin: 0;
 }
@@ -460,7 +456,7 @@ header{
   font-family: 'Roboto', sans-serif, Helvetica;
   font-size: 1.2rem;
   font-weight: 400;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
   line-height: 2;
   text-align: left;
   color: #1f1f1f;
@@ -485,7 +481,6 @@ header{
     cursor: pointer;
   }
 }
-  
 
 .marcas h2{
   font-size: 1.3rem;
@@ -518,7 +513,7 @@ header{
 
 .medios-pago .content-box-4{
   h3{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 800;
     line-height: 2rem;
     margin: 0.8rem 0;
@@ -527,8 +522,9 @@ header{
 
 .medios-pago .content-box-4{
   h4{
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
+  margin-top: 1rem;
   line-height: 1.5rem;
   }
 }
@@ -539,7 +535,7 @@ header{
 
 .medios-pago .content-box-4 .pay-column-2 .logo-paymet {
   img{
-  width: 40%;
+  width: 30%;
   margin-bottom: 0.3rem;
   }
 }
@@ -660,8 +656,32 @@ footer {
 
 @media (min-width: 650px){
 
-.nav-bar .menu{
+#menu{
   display: none;
+}
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-bar a{
+  font-family: 'Poppins', sans-serif, Helvetica;
+  font-weight: 500;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-wrap: nowrap;
+  color: #1f1f1f;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+
+.nav-bar a:hover {
+  background-color: none;
+  color: #e7700d; /*#e47d1d;*/
+  border-bottom: 3px solid #e7700d;
 }
 
 .imagen-aboutus-mobile{
@@ -711,10 +731,9 @@ footer {
   font-weight: 400;
   line-height: 2rem;
   text-align: left;
-  margin: 0 0 1em 2em;
   color: #1f1f1f;
   span{
-    color: #202020;
+    color: #272727;
     font-weight: 600;
     cursor: pointer;
   }

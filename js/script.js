@@ -1,4 +1,4 @@
-/*---------------SLIDER PRINCIPAL---------------*/
+//---------------SLIDER PRINCIPAL---------------
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -22,16 +22,18 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-/*---------------SLIDES AUTOMÁTICAS - MARCAS---------------*/
+//---------------SLIDES AUTOMÁTICAS - MARCAS---------------
 
 const slide = document.getElementById("slide");
 const clone = slide.innerHTML; 
 slide.innerHTML += clone;
 
 
-/*---------------LEER MÁS/MOSTRAR MENOS (MOBILE)---------------*/
+//---------------LEER MÁS/MOSTRAR MENOS (MOBILE)---------------
 
 function toggleComentario(boton) {
+  if (window.innerWidth > 650) return;
+
   const contenedor = boton.closest('.content-box-2');
   const oculto = contenedor.querySelector('.contenido-oculto');
 
@@ -43,3 +45,38 @@ function toggleComentario(boton) {
     boton.textContent = 'Mostrar menos';
   }
 }
+
+
+//EL CONTENIDO QUE SE OCULTA EN MOBILE, SE MUESTRA SIEMPRE EN DESKTOP
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 650) {
+    document.querySelectorAll('.contenido-oculto').forEach(el => {
+      el.style.display = 'block';
+    });
+
+    document.querySelectorAll('.leer-mas-btn').forEach(boton => {
+      boton.textContent = 'Mostrar menos';
+    });
+  }
+});
+
+//---------------MENU DESPLEGABLE (MOBILE)---------------
+    const menuBtn = document.getElementById('menu');
+    const navBar = document.getElementById('nav-bar');
+
+    function toggleMenu() {
+        if (window.innerWidth <= 650) {
+            navBar.classList.toggle('active');
+        }
+    }
+
+    menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleMenu();
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 650) {
+            navBar.classList.remove('active');
+        }
+    });
