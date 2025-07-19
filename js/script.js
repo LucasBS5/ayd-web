@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 //---------------SLIDER PRINCIPAL---------------
 
 let slideIndex = 1;
@@ -11,6 +12,9 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+window.plusSlides = plusSlides;
+window.currentSlide = currentSlide;
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slider-image");
@@ -22,7 +26,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-//---------------SLIDES AUTOMÁTICAS - MARCAS---------------
+//---------------SLIDES AUTOMÁTICAS DE MARCAS---------------
 
 const slide = document.getElementById("slide");
 const clone = slide.innerHTML; 
@@ -46,6 +50,7 @@ function toggleComentario(boton) {
   }
 }
 
+window.toggleComentario = toggleComentario;
 
 //EL CONTENIDO QUE SE OCULTA EN MOBILE, SE MUESTRA SIEMPRE EN DESKTOP
 window.addEventListener('resize', () => {
@@ -53,30 +58,50 @@ window.addEventListener('resize', () => {
     document.querySelectorAll('.contenido-oculto').forEach(el => {
       el.style.display = 'block';
     });
-
-    document.querySelectorAll('.leer-mas-btn').forEach(boton => {
-      boton.textContent = 'Mostrar menos';
-    });
   }
 });
 
 //---------------MENU DESPLEGABLE (MOBILE)---------------
-    const menuBtn = document.getElementById('menu');
-    const navBar = document.getElementById('nav-bar');
 
-    function toggleMenu() {
-        if (window.innerWidth <= 650) {
-            navBar.classList.toggle('active');
+const menuBtn = document.getElementById('menu');
+const navBar = document.getElementById('nav-bar');
+
+function openMenu() {
+    navBar.style.display = 'flex';
+    navBar.style.opacity = '0';
+    void navBar.offsetWidth; // Forzar reflow para que tome la opacidad inicial
+    navBar.classList.add('active');
+    navBar.style.opacity = '1';
+}
+
+function closeMenu() {
+    navBar.style.opacity = '0';
+    setTimeout(() => {
+        navBar.classList.remove('active');
+        navBar.style.display = 'none';
+    }, 300); // mismo tiempo que la transición en CSS
+}
+
+function toggleMenu() {
+    if (window.innerWidth <= 650) {
+        if (navBar.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
         }
     }
+}
 
-    menuBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        toggleMenu();
-    });
+menuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleMenu();
+});
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 650) {
-            navBar.classList.remove('active');
-        }
-    });
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 650) {
+        navBar.classList.remove('active');
+        navBar.style.display = '';
+        navBar.style.opacity = '';
+    }
+});
+});

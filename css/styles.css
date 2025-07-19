@@ -131,22 +131,22 @@ section{
 .logo-slide{
   display: inline-block;
   white-space: nowrap;
-  animation: 10s slide linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 .logo-slide img{ 
-  width: 15%;
-  margin: 0 2em;
+  width: 150px;
+  margin: 0 1em;
   object-fit: contain;
   vertical-align: middle;
 }
 
-@keyframes slide {
-  from{
+@keyframes scroll {
+  0% {
     transform: translateX(0);
   }
-  to{
-    transform:translateX(-50%);
+  100% {
+    transform: translateX(-50%);
   }
 }
 
@@ -283,7 +283,7 @@ footer {
   font-family: 'Roboto', sans-serif, Helvetica;
   font-size: 1.3rem;
   font-weight: 900;
-  color: #7a7a7a;
+  color: #afafaf;
   text-transform: uppercase;
   margin-bottom: 30px;
   display: flex;
@@ -372,27 +372,31 @@ header{
 .nav-bar{
   display: none;
   position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .nav-bar.active {
   display: flex;
   flex-direction: column;
   background-color: #EFEFEF;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+  box-shadow: rgba(0, 0, 0, 0.301) 0px 8px 8px;
   padding: auto;
+  border: none;
   top: 100%;
   right: 0;
   z-index: 20;
+  opacity: 1;
 }
 
 .nav-bar a{
-  font-family: 'Poppins', sans-serif, Helvetica;
+  font-family: 'Roboto', sans-serif, Helvetica;
   font-size: 1.2rem;
   font-weight: 500;
   padding: 1rem 2rem;
   text-align: left;
-  text-decoration: none;
-  color: #1f1f1f;
+  text-decoration:none;
+  color: #252525;
 }
 
 .next, .prev{

@@ -1,0 +1,10 @@
+Fijarse el padding DENTRO de todos los contenedores de las secciones sea igual ✔️
+
+Imágenes/Iconos de Métodos de Pago: Es crucial que se vean los logos de las tarjetas de crédito (Visa, MasterCard, American Express, etc.) y las billeteras virtuales (Mercado Pago, ualá, etc.) de forma clara para que el usuario identifique rápidamente si puede pagar con su método preferido. Los íconos actuales son un poco genéricos; sería mejor usar los logos oficiales ✔️
+
+Testimonios/Reseñas: Si tienen reseñas de clientes satisfechos, una pequeña sección de testimonios podría agregar credibilidad y confianza.
+
+RESPONSIVE ✔️
+
+Optimización SEO
+
